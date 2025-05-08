@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+// colors.scss
+
+$blue-color: #007fff;
+$red-color: #ff0033;
+$green-color: #00b140;
+$yellow-color: #ffd700;
+$orange-color: #ff6600;
+$purple-color: #8000ff;
+$charcoal-color: #333333;
 
 html,
 body {
@@ -7,6 +16,22 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.nav-item {
+  display: none !important;
+}
+.active-button {
+  background-color: #007fff !important;
+  color: white !important;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 @media only screen and (max-width: 600px) {
@@ -27,9 +52,13 @@ body {
     display: none !important;
   }
 
-  mat-drawer-content {
+  .default-width {
     width: 80% !important;
     margin: 0 auto !important;
+  }
+
+  .nav-item {
+    display: flex !important;
   }
 }
 

@@ -11,3 +11,24 @@ mat-drawer {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close-drawer-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+mat-toolbar.scroll {
+  background-color: #d6eaf8 !important;
+}

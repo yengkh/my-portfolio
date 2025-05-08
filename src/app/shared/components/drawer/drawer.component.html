@@ -1,0 +1,40 @@
+<div class="main">
+  <!-- Drawer Content -->
+  <div class="drawer">
+    @for (item of navItems; track $index) {
+    <button
+      mat-button
+      class="drawer-button"
+      [ngClass]="{ 'active-button': activeIndex === $index }"
+      (click)="this.handleChangeNavIndex($index); this.drawer.toggle()"
+    >
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <span>{{ item.title }}</span>
+    </button>
+    }
+  </div>
+
+  <!-- CV -->
+  <div class="dowload-wrapper">
+    <a
+      mat-flat-button
+      class="download-cv-button"
+      style="flex-basis: 200px"
+      href="assets/CHANN YENG web developer CV.pdf"
+      target="_blank"
+    >
+      <mat-icon>rocket_launch</mat-icon>
+      View CV
+    </a>
+    <a
+      href="assets/CHANN YENG web developer CV.pdf"
+      download
+      mat-flat-button
+      class="download-cv-button"
+      style="padding: 0 5px"
+    >
+      <mat-icon>vertical_align_bottom</mat-icon>
+      Download CV
+    </a>
+  </div>
+</div>

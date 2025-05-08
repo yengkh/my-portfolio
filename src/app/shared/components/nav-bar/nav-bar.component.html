@@ -1,0 +1,13 @@
+<div class="nav-item">
+  @for (item of navItems; track $index) {
+  <button
+    mat-button
+    color="primary"
+    [ngClass]="{ 'active-button': this.activeIndex === $index }"
+    (click)="this.handleChangeNavIndex($index)"
+  >
+    <mat-icon>{{ item.icon }}</mat-icon>
+    {{ item.title }}
+  </button>
+  }
+</div>

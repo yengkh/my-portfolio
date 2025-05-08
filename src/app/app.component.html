@@ -1,22 +1,36 @@
 <mat-drawer-container class="drawer-container" [hasBackdrop]="true">
-  <mat-drawer #drawer>I'm a drawer</mat-drawer>
-  <mat-drawer-content>
-    <mat-toolbar>
-      <button
-        mat-icon-button
-        class="menu-icon"
-        aria-label="Icon-button with menu icon"
-        (click)="drawer.toggle()"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-      <h1>Chann Yeng</h1>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="" aria-label="Toggle mode button">
-        <mat-icon>light_mode</mat-icon>
-      </button>
+  <mat-drawer-content (scroll)="onScroll($event)">
+    <mat-toolbar [class.scroll]="isScroll" color="primary">
+      <div class="default-width flex-row space-between">
+        <section class="flex-row flex-row-nav">
+          <div class="flex-row">
+            <button
+              mat-icon-button
+              class="menu-icon"
+              aria-label="Icon-button with menu icon"
+              (click)="drawer.toggle()"
+            >
+              <mat-icon>menu</mat-icon>
+            </button>
+            <h3>Chann Yeng</h3>
+          </div>
+          <app-nav-bar />
+        </section>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="" aria-label="Toggle mode button">
+          <mat-icon>light_mode</mat-icon>
+        </button>
+      </div>
     </mat-toolbar>
-
-    <router-outlet />
+    <div style="height: 200%; padding-top: 65px">
+      <router-outlet />
+      hello
+    </div>
   </mat-drawer-content>
+  <mat-drawer #drawer>
+    <div class="close-drawer-button">
+      <h2>Chann Yeng</h2>
+    </div>
+    <app-drawer [drawer]="drawer" />
+  </mat-drawer>
 </mat-drawer-container>
