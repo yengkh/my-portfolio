@@ -17,14 +17,43 @@
           <app-nav-bar />
         </section>
         <span class="example-spacer"></span>
-        <button mat-icon-button class="" aria-label="Toggle mode button">
-          <mat-icon>light_mode</mat-icon>
-        </button>
+        <!-- Right -->
+        <div class="flex-row gap-10">
+          <button
+            mat-icon-button
+            class=""
+            aria-label="Toggle mode button"
+            (click)="themeService.toggleTheme()"
+          >
+            <mat-icon>light_mode</mat-icon>
+          </button>
+          <a
+            class="download-cv-button display-none"
+            href="/assets/CHANN YENG web developer CV.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <button mat-flat-button>
+              <mat-icon>rocket_launch</mat-icon>
+              View CV
+            </button>
+          </a>
+          <a
+            href="/assets/CHANN YENG web developer CV.pdf"
+            download
+            class="download-cv-button display-none"
+            rel="noopener"
+          >
+            <button mat-stroked-button>
+              <mat-icon>vertical_align_bottom</mat-icon>
+              Download CV
+            </button>
+          </a>
+        </div>
       </div>
     </mat-toolbar>
-    <div style="height: 200%; padding-top: 65px">
+    <div style="padding-top: 65px">
       <router-outlet />
-      hello
     </div>
   </mat-drawer-content>
   <mat-drawer #drawer>

@@ -28,7 +28,10 @@ mat-drawer {
   justify-content: space-between;
   padding: 10px;
 }
+.download-cv-button {
+  width: fit-content;
+}
 
-mat-toolbar.scroll {
-  background-color: #d6eaf8 !important;
+.gap-10 {
+  gap: 10px;
 }

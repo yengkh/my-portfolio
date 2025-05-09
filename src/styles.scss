@@ -1,13 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-// colors.scss
+@use "@angular/material" as mat;
 
-$blue-color: #007fff;
-$red-color: #ff0033;
-$green-color: #00b140;
-$yellow-color: #ffd700;
-$orange-color: #ff6600;
-$purple-color: #8000ff;
-$charcoal-color: #333333;
+html {
+  @include mat.theme(
+    (
+      color: mat.$azure-palette,
+      typography: Roboto,
+      density: -2,
+    )
+  );
+}
+
+html.dark-mode {
+  color-scheme: dark;
+  @include mat.theme(
+    (
+      color: mat.$cyan-palette,
+      typography: Roboto,
+      density: -2,
+    )
+  );
+}
+html.light-mode {
+  color-scheme: light;
+  @include mat.theme(
+    (
+      color: mat.$azure-palette,
+      typography: Roboto,
+      density: -2,
+    )
+  );
+}
 
 html,
 body {
@@ -34,6 +57,12 @@ mat-toolbar {
   transition: background-color 0.3s ease;
 }
 
+.display-none {
+  display: none !important;
+}
+
+// Ensure the theme covers the entire app
+
 @media only screen and (max-width: 600px) {
 }
 
@@ -59,6 +88,10 @@ mat-toolbar {
 
   .nav-item {
     display: flex !important;
+  }
+
+  .display-none {
+    display: block !important;
   }
 }
 

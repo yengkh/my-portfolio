@@ -17,5 +17,12 @@
   </head>
   <body class="mat-typography">
     <app-root></app-root>
+
+    <script>
+      const theme = localStorage.getItem("my-theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark-mode");
+      }
+    </script>
   </body>
 </html>
