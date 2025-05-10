@@ -3,10 +3,10 @@
   <p class="sub-title">
     The skills, tools and technologies I am really good at:
   </p>
-  <div class="margin-top-40">
+  <div class="margin-top-40 content-wrapper">
     @for (item of skillData; track $index) {
-    <div>
-      <img src="{{ item.icon }}" alt="{{ item.title }}" />
+    <div class="item-wrapper">
+      <img src="{{ item.icon }}" alt="{{ item.title }}" class="img" />
       <p>{{ item.title }}</p>
     </div>
     }
