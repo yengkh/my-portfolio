@@ -73,6 +73,12 @@ mat-toolbar {
 .margin-top-40 {
   margin-top: 40px;
 }
+
+.sub-title {
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+}
 // Ensure the theme covers the entire app
 
 @media only screen and (max-width: 600px) {

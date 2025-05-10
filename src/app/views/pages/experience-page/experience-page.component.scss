@@ -1,0 +1,58 @@
+mat-card {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.experience-detail {
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+.label-path {
+  margin-top: 30px;
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: end;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+
+ul li::marker {
+  color: red;
+}
+@media only screen and (min-width: 768px) {
+  mat-card {
+    flex-direction: row;
+  }
+
+  .mian {
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+  mat-card-subtitle {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .experience-detail {
+    padding: 20px;
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .mian {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+
+  mat-card-header {
+    width: 40% !important;
+  }
+  .experience-detail {
+    width: 60% !important;
+  }
+}

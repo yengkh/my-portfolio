@@ -1,0 +1,33 @@
+<section class="margin-top-100 mian">
+  <app-page-title title="Experience" />
+  <p class="sub-title">
+    Here is a quick summary of my most recent experiences:
+  </p>
+  <div class="margin-top-40">
+    @for (item of experienceData; track $index) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1>{{ item.workPlace }}</h1>
+        </mat-card-title>
+      </mat-card-header>
+      <div class="experience-detail">
+        <mat-card-subtitle>
+          <p style="color: gray">{{ item.duration }}</p>
+          <h3>{{ item.position }}</h3>
+        </mat-card-subtitle>
+        <ul style="line-height: 30px">
+          @for (desc of item.description; track $index) {
+          <li>{{ desc }}</li>
+          }
+        </ul>
+        <div class="label-path">
+          @for (label of item.technologies; track $index) {
+          <app-label title="{{ label }}" />
+          }
+        </div>
+      </div>
+    </mat-card>
+    }
+  </div>
+</section>
