@@ -4,10 +4,16 @@ import { ThemeService } from '../../../services/toggle-drawer/toggle-drawer.serv
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { p1, p2, p3, p4, p5, wellcomText } from '../../../data/about.data';
+import { PageTitleComponent } from '../../components/page-title/page-title.component';
 
 @Component({
   selector: 'app-hero-page',
-  imports: [MatIconModule, MatButtonModule, MatGridListModule],
+  imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatGridListModule,
+    PageTitleComponent,
+  ],
   templateUrl: './hero-page.component.html',
   styleUrl: './hero-page.component.scss',
   providers: [ThemeService],

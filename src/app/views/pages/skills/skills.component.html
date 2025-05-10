@@ -1,0 +1,14 @@
+<section class="margin-top-100">
+  <app-page-title title="Skills"></app-page-title>
+  <p class="sub-title">
+    The skills, tools and technologies I am really good at:
+  </p>
+  <div class="margin-top-40">
+    @for (item of skillData; track $index) {
+    <div>
+      <img src="{{ item.icon }}" alt="{{ item.title }}" />
+      <p>{{ item.title }}</p>
+    </div>
+    }
+  </div>
+</section>
