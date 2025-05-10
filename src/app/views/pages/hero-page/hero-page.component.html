@@ -1,0 +1,67 @@
+<section class="main">
+  <div class="image-wrapper">
+    <img src="{{ myImage1 }}" alt="This is my image 1" loading="lazy" />
+  </div>
+  <div class="detail-wrapper">
+    <p class="title-text">
+      Hello I'm Yeng <span class="hand-emoji-hover">👋</span>
+    </p>
+    <p>
+      {{ wellconText }}
+    </p>
+
+    <div class="flex-row gap-10">
+      <mat-icon>pin_drop</mat-icon>
+      <address class="location-text">
+        Chak Angrae Kraom, Meanchey, Phnom Penh City
+      </address>
+    </div>
+    <div class="socail-wrapper">
+      <a href="https://github.com/yengkh" target="_blank">
+        <button mat-icon-button>
+          <i class="fa-brands fa-github"></i></button
+      ></a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="margin-top-50">
+  <div class="about-title">
+    <button mat-flat-button>About me</button>
+  </div>
+  <div class="margin-top-40">
+    <img
+      src="{{ myImage2 }}"
+      alt="THis is my seconde image"
+      loading="lazy"
+      class="seconde-image"
+    />
+
+    <div class="detail-body-wrapper">
+      <strong class="detail-title">Curious about me? Here you have it:</strong>
+      <p>
+        {{ p1 }}
+      </p>
+      <p>
+        {{ p2 }}
+      </p>
+      <p>
+        {{ p3 }}
+      </p>
+      <p>
+        {{ p4 }}
+      </p>
+      <p>Finally, some quick bits about me.</p>
+      <ul>
+        <li>B.E. in Computer Engineering</li>
+        <li>Avid learner</li>
+        <li>Full time freelancer</li>
+        <li>Aspiring indie hacker</li>
+      </ul>
+      <p>
+        {{ p5 }}
+      </p>
+    </div>
+  </div>
+</section>

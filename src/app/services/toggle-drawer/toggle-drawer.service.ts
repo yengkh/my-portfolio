@@ -1,6 +1,7 @@
 import { Injectable, Inject, PLATFORM_ID, inject, signal } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ThemeType } from '../../types/theme.type';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +9,15 @@ import { ThemeType } from '../../types/theme.type';
 export class ThemeService {
   private readonly document = inject(DOCUMENT);
   private readonly currentTheme = signal<ThemeType>('light');
+  private _themeModeSub = new BehaviorSubject<string>('light');
+  checkMode$ = this._themeModeSub.asObservable();
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.setTheme(this.getThemeFromLocalStorage() || 'light');
+    if (isPlatformBrowser(platformId)) {
+      const storedTheme = this.getThemeFromLocalStorage() ?? 'light';
+      this._themeModeSub.next(storedTheme);
+    }
   }
 
   toggleTheme() {

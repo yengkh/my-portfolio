@@ -61,6 +61,18 @@ mat-toolbar {
   display: none !important;
 }
 
+.page-layout-width {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
 // Ensure the theme covers the entire app
 
 @media only screen and (max-width: 600px) {
@@ -82,8 +94,9 @@ mat-toolbar {
   }
 
   .default-width {
-    width: 80% !important;
+    width: 90% !important;
     margin: 0 auto !important;
+    padding: 0 !important;
   }
 
   .nav-item {
@@ -93,9 +106,20 @@ mat-toolbar {
   .display-none {
     display: block !important;
   }
+  .page-layout-width {
+    width: 90%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .default-width {
+    width: 80% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .page-layout-width {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
