@@ -15,7 +15,7 @@ html.dark-mode {
   color-scheme: dark;
   @include mat.theme(
     (
-      color: mat.$cyan-palette,
+      color: mat.$magenta-palette,
       typography: Roboto,
       density: -2,
     )
