@@ -2,7 +2,7 @@ import { ExperienceType } from '../types/experience.type';
 
 export const experienceData: ExperienceType[] = [
   {
-    workPlace: 'Topauto1653',
+    workPlace: 'Topauto1653 Carage',
     position: 'Full-Stack Developer',
     duration: 'Agust 2024 - Present',
     description: [
