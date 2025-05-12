@@ -1,0 +1,38 @@
+<section class="margin-top-100">
+  <app-page-title title="Work" />
+  <p class="sub-title">Some of the noteworthy projects I have built:</p>
+  <div class="margin-top-40"></div>
+  @for (work of workData; track $index) {
+  <mat-card style="margin-bottom: 30px">
+    <div class="image-wrapper">
+      <img src="{{ work.image }}" alt="{{ work.title }} show image" />
+    </div>
+    <div class="card-description">
+      <mat-card-title>{{ work.title }}</mat-card-title>
+      <p>{{ work.description }}</p>
+      <div class="label-wrapper">
+        @for (workTechnologies of work.technologies; track $index) {
+        <app-label title="{{ workTechnologies }}" />
+        }
+      </div>
+      <mat-card-actions>
+        <a
+          [href]="work.link || null"
+          target="_blank"
+          [ngStyle]="{
+            'pointer-events': work.link === '' ? 'none' : 'auto',
+            'not-allowed-cursor': work.link === ''
+          }"
+          [title]="
+            work.link === '' ? 'Not allowed top open the link!' : 'Open link'
+          "
+        >
+          <button mat-icon-button [disabled]="work.link === ''">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+        </a>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+  }
+</section>
