@@ -39,6 +39,10 @@
 .not-allowed-cursor {
   cursor: not-allowed;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
 mat-card-actions {
   display: flex;
   align-items: end;
@@ -50,9 +54,7 @@ mat-card-actions {
     display: flex !important;
     flex-direction: row;
     gap: 20px;
-    .image-wrapper {
-      width: 50% !important;
-    }
+
     .card-description {
       width: 50% !important;
       padding: 20px;
@@ -69,6 +71,16 @@ mat-card-actions {
     width: 50%;
   }
 
+  .image-wrapper {
+    width: 50% !important;
+  }
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .flex-revers {
+    flex-direction: row-reverse;
+  }
   // img {
   //   max-width: 500px !important;
   //   height: auto;

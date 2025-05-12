@@ -3,9 +3,17 @@
   <p class="sub-title">Some of the noteworthy projects I have built:</p>
   <div class="margin-top-40"></div>
   @for (work of workData; track $index) {
-  <mat-card style="margin-bottom: 30px">
+  <mat-card
+    style="margin-bottom: 30px"
+    class="wrapper"
+    [ngClass]="{ 'flex-revers': $index % 2 === 0,  }"
+  >
     <div class="image-wrapper">
-      <img src="{{ work.image }}" alt="{{ work.title }} show image" />
+      <img
+        src="{{ work.image }}"
+        alt="{{ work.title }} show image"
+        loading="lazy"
+      />
     </div>
     <div class="card-description">
       <mat-card-title>{{ work.title }}</mat-card-title>

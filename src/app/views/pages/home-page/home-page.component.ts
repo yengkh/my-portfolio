@@ -3,6 +3,7 @@ import { HeroPageComponent } from '../hero-page/hero-page.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ExperiencePageComponent } from '../experience-page/experience-page.component';
 import { WorkComponent } from '../work/work.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home-page',
@@ -11,6 +12,7 @@ import { WorkComponent } from '../work/work.component';
     SkillsComponent,
     ExperiencePageComponent,
     WorkComponent,
+    ContactComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
