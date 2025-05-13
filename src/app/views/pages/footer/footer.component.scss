@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.footer-copy-right {
+  display: flex;
+  gap: 8px;
+  color: gray;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
